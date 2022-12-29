@@ -1,0 +1,36 @@
+.section{
+    & > * {
+        margin-bottom: 4rem
+    }
+    &__box-title{
+        @include flex(center,center);
+        flex-direction: column;
+        img{
+            margin-bottom:  1rem;
+        }
+        h3{
+            text-align: center;
+            font-family: 'Mitr', sans-serif;
+            font-size: 3.3rem;
+            line-height: 4rem;
+            font-weight: 500;
+            color: $txt-main-color;
+            @include mobile{
+                font-size: 2.8rem;
+                line-height: 3.6rem;
+                
+            }
+        }
+        &.color-white
+        {
+
+            h3{
+                color: $txt-white;
+
+            }
+
+        }
+    }
+    
+    
+}

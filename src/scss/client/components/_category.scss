@@ -1,0 +1,154 @@
+.category{
+    @include flex(flex-start,space-between);
+    margin-top: 3rem;
+
+    &__toggle{
+        position: absolute;
+        right: 0;
+        top:calc(100% + 2rem);
+        display: none;
+        @include tablet{
+            display: block;
+        }
+
+    }
+    &__filter{
+        padding: 2rem;
+        width: 25%;
+        border: .2rem solid $border-color;
+        border-radius: 2rem;
+        margin-right: 2rem;
+        @include tablet{
+            background-color: white;
+            position: absolute;
+            z-index: 999;
+            box-shadow: $box-shadow;
+            padding-bottom: 5rem;
+           
+            overflow:hidden;
+            border-radius: .5rem;
+            width: calc(100% - 2rem );
+             left: 1rem ;
+            right: 1rem;
+            transform: translateX(-100%);
+            transition: .3s all linear;
+            &.toggle{
+                transform: translateX(0);
+            }
+
+        }
+        &__close{
+            position: absolute;
+            right: 2rem;
+            top:2rem;
+            i{
+                font-size: 3.5rem;
+
+            }
+        }
+        &__title{
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: $txt-main-color;
+            letter-spacing: .1rem;
+            // font-family: 'Mitr', sans-serif;
+        }
+        &__widget{
+            margin-top: 1rem;
+           &__title{
+            color: $txt-main-color;
+
+               font-size: 1.4rem;
+               font-weight: 600;
+            letter-spacing: .1rem;
+
+           }
+           &__content{
+              gap: 1rem;
+           }
+        }
+    }
+    &__content{
+        flex:1;
+        @include tablet{
+            margin :0 2rem
+        }
+        &__banner{
+            width: 100%;
+            border-radius: 2rem;
+            overflow: hidden;
+
+        }
+        &__info{
+            margin: 2rem 0;
+            &__title{
+                color: $txt-main-color;
+                font-size: 2.6rem;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                margin-bottom: .8rem;
+            }
+            &__description{
+                font-size: 1.3rem;
+                font-family: 'Mitr', sans-serif;
+                line-height: 1.9rem;
+                font-weight: 400;
+            }
+        }
+        &__section{
+            @include flex(center,space-between);
+            border: .2rem solid $border-color;
+            border-radius: 1.6rem;
+            padding: 2rem 1rem;
+            font-size: 1.5rem;
+            position: relative;
+            
+            @include tablet{
+                margin-bottom: 8rem;
+                flex-direction: column;
+                @include flex(flex-start,flex-start);
+            }
+            
+            &__total{
+               @include flex(center,flex-start);
+               i{
+                font-size: 2.6rem;
+                cursor: pointer;
+                margin-right: 1rem ;
+            //     &:nth-child(2){
+            //        font-size: 3.2rem;
+            //        margin-right: 1rem;
+            //      color: #666666;;
+            //    }
+        
+               }
+               @include tablet{
+                margin-bottom: 2rem;
+              
+            }
+               
+            }
+            &__sort-by{
+                select{
+                    width: 25rem;
+                    border-radius: .5rem;
+                    border: .2rem solid $border-color;
+                    outline: none;
+                    padding: .5rem;
+                    margin-left: 1rem;
+                    color: #666666;
+                  
+                    option{
+                        padding: 2rem;
+                        display: block;
+                    }
+                
+                }
+            }
+        }
+        &__list-product{
+            margin-top: 4rem;
+        }
+    }
+}
